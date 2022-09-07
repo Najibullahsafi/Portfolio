@@ -21,11 +21,12 @@ nav {
     padding-top: 45px;
     padding-left: 8%;
     padding-right: 8%;
+    font-size: 20px;
 }
 
 .logo {
     color: white;
-    font-size: 35px;
+    font-size: 70px;
     letter-spacing: 1px;
     cursor: pointer;
 }
@@ -89,7 +90,7 @@ h3 {
 h4 {
     color: rgba(98, 168, 233, 0.8);
     initial-letter: 2px;
-    font-size: 20px;
+    font-size: 29px;
 }
 
 .newslatter form {
@@ -365,8 +366,4 @@ img {
     margin-bottom: 20px;
     border-radius: 20px;
     position: relative;
-
-
-
-
 }
