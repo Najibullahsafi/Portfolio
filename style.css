@@ -112,6 +112,33 @@ h4 {
 
 }
 
+/*Floating Back-To-Top Button*/
+#myBtn {
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: 18.5%;
+    left: 90.25%;
+    max-width: 150px;
+    height: 40px;
+    width: 130px;
+    font-size: 18px;
+    border-color: rgba(85, 85, 85, 0.2);
+    background-color: rgb(100, 100, 100);
+    padding: .5px;
+    border-radius: 20px;
+    background-color: rgb(228, 22, 22);
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+/*On Hover Color Change*/
+#myBtn:hover {
+    background-color: transparent;
+    border: 2px solid #f9004d;
+}
+
 .about-text {
     width: 550px;
 }
@@ -231,10 +258,9 @@ pra p {
 }
 
 footer {
-    position: relative;
     width: 100%;
     height: 400px;
-    background: #101010;
+    background-color: #252020;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,7 +296,7 @@ footer p:nth-child(2) {
     border-radius: 50%;
     margin: 22px 10px;
     color: white;
-    text-decoration: none;
+
 }
 
 .social a:hover {
@@ -279,9 +305,10 @@ footer p:nth-child(2) {
 }
 
 .end {
-    position: absolute;
+    position: relative;
     color: #f9004d;
-    bottom: 35px;
+    bottom: 1px;
+    top: 80px;
     font-size: 14px;
 }
 
@@ -365,5 +392,5 @@ img {
     margin-left: 55PX;
     margin-bottom: 20px;
     border-radius: 20px;
-    position: relative;
+    position: static;
 }
