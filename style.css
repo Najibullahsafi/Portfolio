@@ -1,15 +1,24 @@
+body {
+    background: #eee;
+    max-width: 100% auto;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Open Sans';
+    background: #fafafa;
+    /*   outline: 1px solid #ccc; */
+}
+
 * {
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
-    box-sizing: border-box;
-
+    background-size: 100% auto;
 }
 
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: url(pic1.jpg);
+    background-image: url(photos/pic1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -88,7 +97,7 @@ h3 {
 }
 
 h4 {
-    color: rgba(98, 168, 233, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     initial-letter: 2px;
     font-size: 29px;
 }
@@ -115,10 +124,11 @@ h4 {
 /*Floating Back-To-Top Button*/
 #myBtn {
     position: fixed;
+    display: inline;
     bottom: 10px;
     float: right;
     right: 18.5%;
-    left: 90.25%;
+    left: 89.25%;
     max-width: 150px;
     height: 40px;
     width: 130px;
@@ -330,13 +340,14 @@ footer p:nth-child(2) {
 } */
 
 
-
-
 .lightbox-gallery {
-    background-image: linear-gradient(#4A148C, #E53935);
-    background-repeat: no-repeat;
-    color: #000;
-    overflow-x: hidden
+    background-color: rgb(80, 137, 155);
+    position: static;
+    display: grid;
+    background-size: cover;
+    max-width: 100% auto;
+    width: 800px auto;
+
 }
 
 .lightbox-gallery p {
@@ -369,28 +380,229 @@ footer p:nth-child(2) {
     max-width: 500px;
     margin: 0 auto 40px;
     position: relative;
+
 }
 
 .lightbox-gallery .intro p {
     margin-right: 10px;
     left: 50px;
     position: relative;
+
 }
 
-.lightbox-gallery .photos {
 
-    padding-bottom: 20px
-}
 
-img {
-    left: 100px;
-    width: 500px;
-    height: 400px;
-    display: flex;
+.lightbox-gallery img {
     float: left;
-    margin-top: 100px;
-    margin-left: 55PX;
-    margin-bottom: 20px;
-    border-radius: 20px;
+    align-items: center;
+    max-width: 100% auto;
+    border-radius: 10px;
+    margin: 20px 25px;
+
+}
+
+
+
+/*Education start*/
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+    --color: #3c3163;
+    --transition-time: 0.5s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+.cards-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    padding: 4rem;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.card {
+    font-family: 'Heebo';
+    --bg-filter-opacity: 0.5;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
+    height: 30em;
+    width: 23em;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    /*margin: 2em;*/
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 5em -1em black;
+    transition: all, var(--transition-time);
     position: static;
+    overflow: hidden;
+    border: 10px solid #ccc;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: rotate(0);
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.card p {
+    font-size: 0.75em;
+    font-family: sans-serif;
+    margin-top: 0.5em;
+    line-height: 2em;
+}
+
+.card .tags {
+    display: flex;
+}
+
+.card .tags .tag {
+    font-size: 0.75em;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.3rem;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    transition: all, var(--transition-time);
+}
+
+.card:hover .tags .tag {
+    background: var(--color);
+    color: white;
+}
+
+.card .date {
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 0.75em;
+    padding: 1em;
+    line-height: 1em;
+    opacity: .8;
+}
+
+.card:before,
+.card:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, var(--transition-time);
+    transition-timing-function: ease-in-out;
+}
+
+.card:before {
+    background: #ddd;
+    width: 250%;
+    height: 250%;
+}
+
+.card:after {
+    background: rgb(139, 185, 182);
+    width: 200%;
+    height: 200%;
+}
+
+.card:hover {
+    color: var(--color);
+}
+
+.card:hover:before,
+.card:hover:after {
+    transform: scale(1);
+}
+
+.card-grid-space .num {
+    font-size: 3em;
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+}
+
+.info {
+    font-size: 1.2em;
+    display: flex;
+    padding: 1em 3em;
+    height: 3em;
+    margin-bottom: 10px;
+    align-items: center;
+
+}
+
+.info img {
+    height: 5em;
+    margin-right: 0.5em;
+    border-radius: 10px 30px;
+
+}
+
+.info h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #252020;
+
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        justify-content: center;
+    }
+
+    .card-grid-space .num {
+        /margin-left: 0;
+        /text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards-wrapper {
+        padding: 4rem 2rem;
+    }
+
+    .card {
+        max-width: calc(100vw - 4rem);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+
+    .info h1 {
+        margin: 0;
+    }
 }
