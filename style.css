@@ -580,10 +580,6 @@ a {
         justify-content: center;
     }
 
-    .card-grid-space .num {
-        /margin-left: 0;
-        /text-align: center;
-    }
 }
 
 @media screen and (max-width: 500px) {
